@@ -1,0 +1,26 @@
+[project]
+name = "clinical-trial-recruitment-assessment"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "BeingQ", email = "137730042+BeingQ-space@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "dbt-bigquery>=1.12.2",
+    "dbt-duckdb>=1.11.1",
+    "duckdb>=2.0.0",
+    "mlflow>=3.18.0",
+    "pandas>=3.1.1",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.67.0",
+    "xgboost>=3.4.1",
+]
+
+[project.scripts]
+clinical-trial-recruitment-assessment = "clinical_trial_recruitment_assessment:main"
+
+[build-system]
+requires = ["uv_build>=0.12.22,<0.13.0"]
+build-backend = "uv_build"
