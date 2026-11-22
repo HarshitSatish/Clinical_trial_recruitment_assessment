@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: aact
+    schema: raw            # the schema Harshith's load_duckdb.sql created
+    tables:
+      - name: studies
+      - name: calculated_values
+      - name: designs
+      - name: eligibilities
+      - name: sponsors
+      - name: browse_conditions
+      - name: interventions
+      - name: countries

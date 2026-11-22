@@ -1,0 +1,7 @@
+clinical_trial_risk:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../aact.duckdb     # relative to the dbt/ folder you run dbt from
+      threads: 4

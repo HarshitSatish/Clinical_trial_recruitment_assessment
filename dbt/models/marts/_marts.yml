@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: mart_trial_analysis
+    description: One row per interventional trial that is Completed, Terminated, or Withdrawn.
+    columns:
+      - name: nct_id
+        tests:
+          - not_null
+          - unique
+      - name: at_risk
+        tests:
+          - not_null
+      - name: overall_status
+        tests:
+          - accepted_values:
+              values: ['COMPLETED', 'TERMINATED', 'WITHDRAWN']

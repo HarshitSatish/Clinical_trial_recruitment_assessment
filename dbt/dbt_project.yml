@@ -1,0 +1,17 @@
+name: clinical_trial_risk
+version: "1.0.0"
+config-version: 2
+profile: clinical_trial_risk
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+models:
+  clinical_trial_risk:
+    staging:
+      +materialized: view      # light cleanup only, no need to store copies
+    intermediate:
+      +materialized: table
+    marts:
+      +materialized: table     # the one table everything downstream reads

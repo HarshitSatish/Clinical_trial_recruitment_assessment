@@ -1,0 +1,1166 @@
+[0m17:49:29.139825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108599940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10adeae90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10adeac10>]}
+
+
+============================== 17:49:29.142218 | 3a104721-b98b-477a-82e8-3702827529d3 ==============================
+[0m17:49:29.142218 [info ] [MainThread]: Running with dbt=1.12.7
+[0m17:49:29.142448 [debug] [MainThread]: running dbt with arguments {'log_path': '/Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/logs', 'write_json': 'True', 'profiles_dir': '/Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt', 'invocation_command': 'dbt debug', 'quiet': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'cache_selected_only': 'False', 'empty': 'None', 'indirect_selection': 'eager', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'debug': 'False', 'hints_enabled': 'True', 'printer_width': '80', 'partial_parse': 'True', 'maximum_seed_size_mib': '1', 'static_parser': 'True', 'log_cache_events': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'version_check': 'True', 'log_format': 'default'}
+[0m17:49:29.149587 [info ] [MainThread]: dbt version: 1.12.7
+[0m17:49:29.149734 [info ] [MainThread]: python version: 3.14.6
+[0m17:49:29.149820 [info ] [MainThread]: python path: /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/.venv/bin/python3
+[0m17:49:29.149896 [info ] [MainThread]: os info: macOS-27.2.1-arm64-arm-64bit-Mach-O
+[0m17:49:29.616222 [info ] [MainThread]: Using profiles dir at /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt
+[0m17:49:29.616433 [info ] [MainThread]: Using profiles.yml file at /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/profiles.yml
+[0m17:49:29.616533 [info ] [MainThread]: Using dbt_project.yml file at /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/dbt_project.yml
+[0m17:49:29.617483 [info ] [MainThread]: adapter type: duckdb
+[0m17:49:29.617587 [info ] [MainThread]: adapter version: 1.11.1
+[0m17:49:29.649708 [info ] [MainThread]: Configuration:
+[0m17:49:29.649850 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:49:29.649937 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:49:29.650013 [info ] [MainThread]: Required dependencies:
+[0m17:49:29.650137 [debug] [MainThread]: Executing "git --help"
+[0m17:49:29.675170 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:49:29.675664 [debug] [MainThread]: STDERR: "b''"
+[0m17:49:29.675785 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:49:29.675885 [info ] [MainThread]: Connection:
+[0m17:49:29.676008 [info ] [MainThread]:   database: aact
+[0m17:49:29.676077 [info ] [MainThread]:   schema: main
+[0m17:49:29.676142 [info ] [MainThread]:   path: ../aact.duckdb
+[0m17:49:29.676204 [info ] [MainThread]:   config_options: None
+[0m17:49:29.676267 [info ] [MainThread]:   extensions: None
+[0m17:49:29.676332 [info ] [MainThread]:   settings: {}
+[0m17:49:29.676396 [info ] [MainThread]:   external_root: .
+[0m17:49:29.676459 [info ] [MainThread]:   use_credential_provider: None
+[0m17:49:29.676524 [info ] [MainThread]:   attach: None
+[0m17:49:29.676584 [info ] [MainThread]:   filesystems: None
+[0m17:49:29.676646 [info ] [MainThread]:   remote: None
+[0m17:49:29.676705 [info ] [MainThread]:   plugins: None
+[0m17:49:29.676763 [info ] [MainThread]:   disable_transactions: False
+[0m17:49:29.677060 [info ] [MainThread]: Registered adapter: duckdb=1.11.1
+[0m17:49:29.737659 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m17:49:29.759196 [debug] [MainThread]: Using duckdb connection "debug"
+[0m17:49:29.759336 [debug] [MainThread]: On debug: select 1 as id
+[0m17:49:29.759422 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:49:29.776540 [debug] [MainThread]: SQL status: OK in 0.017 seconds
+[0m17:49:29.776921 [debug] [MainThread]: On debug: Close
+[0m17:49:29.777097 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:49:29.777207 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:49:29.784656 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.68000156, "process_in_blocks": "0", "process_kernel_time": 0.196714, "process_mem_max_rss": "174374912", "process_out_blocks": "0", "process_user_time": 0.657918}
+[0m17:49:29.784848 [debug] [MainThread]: Command `dbt debug` succeeded at 17:49:29.784813 after 0.68 seconds
+[0m17:49:29.784954 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:49:29.785077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8f7820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cc26570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cc5ef10>]}
+[0m17:49:29.785228 [debug] [MainThread]: Flushing usage events
+[0m17:49:30.103363 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:49:35.305598 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073e1940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11166aad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11166a850>]}
+
+
+============================== 17:49:35.307392 | 1f63c3ca-99d4-4291-a628-4583e0f05cf8 ==============================
+[0m17:49:35.307392 [info ] [MainThread]: Running with dbt=1.12.7
+[0m17:49:35.307628 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'write_json': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'quiet': 'False', 'log_format': 'default', 'empty': 'False', 'version_check': 'True', 'printer_width': '80', 'static_parser': 'True', 'invocation_command': 'dbt build', 'no_print': 'None', 'debug': 'False', 'profiles_dir': '/Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'hints_enabled': 'True', 'use_colors': 'True', 'introspect': 'True', 'maximum_seed_size_mib': '1', 'indirect_selection': 'eager', 'warn_error': 'None', 'target_path': 'None', 'log_path': '/Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/logs'}
+[0m17:49:35.399906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111a1e9e0>]}
+[0m17:49:35.418764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1115febe0>]}
+[0m17:49:35.419605 [info ] [MainThread]: Registered adapter: duckdb=1.11.1
+[0m17:49:35.465683 [debug] [MainThread]: checksum: 1501fbaa51ce24b5722044347e5dacc1de07e8a2e11fb42fe4bf6416f12d3bee, vars: {}, profile: clinical_trial_risk, target: dev, version: 1.12.7
+[0m17:49:35.466038 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:49:35.466175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f69e50>]}
+[0m17:49:35.934420 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'mart_trial_analysis' in package 'clinical_trial_risk'
+(models/marts/_marts.yml). Arguments to generic tests should be nested under the
+`arguments` property.
+[0m17:49:35.934640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1126176b0>]}
+[0m17:49:35.975690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112472890>]}
+[0m17:49:36.013908 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/target/manifest.json
+[0m17:49:36.014992 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/target/semantic_manifest.json
+[0m17:49:36.026387 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/target/osi_document.json
+[0m17:49:36.037909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113912dd0>]}
+[0m17:49:36.038102 [info ] [MainThread]: Found 12 models, 5 data tests, 8 sources, 513 macros
+[0m17:49:36.039111 [info ] [MainThread]: 
+[0m17:49:36.039236 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:49:36.039318 [info ] [MainThread]: 
+[0m17:49:36.039491 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:49:36.041179 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_aact'
+[0m17:49:36.065459 [debug] [ThreadPool]: Using duckdb connection "list_aact"
+[0m17:49:36.065607 [debug] [ThreadPool]: On list_aact: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "connection_name": "list_aact"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"aact"'
+    
+  
+  
+[0m17:49:36.065696 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:49:36.076574 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m17:49:36.077028 [debug] [ThreadPool]: On list_aact: Close
+[0m17:49:36.077285 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_aact, now create_aact_main)
+[0m17:49:36.077432 [debug] [ThreadPool]: Creating schema "database: "aact"
+schema: "main"
+"
+[0m17:49:36.079757 [debug] [ThreadPool]: Using duckdb connection "create_aact_main"
+[0m17:49:36.079860 [debug] [ThreadPool]: On create_aact_main: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "connection_name": "create_aact_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='aact'
+        and type != 'duckdb'
+    
+  
+[0m17:49:36.079937 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:49:36.080336 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:49:36.080675 [debug] [ThreadPool]: Using duckdb connection "create_aact_main"
+[0m17:49:36.080756 [debug] [ThreadPool]: On create_aact_main: BEGIN
+[0m17:49:36.080925 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:49:36.081027 [debug] [ThreadPool]: Using duckdb connection "create_aact_main"
+[0m17:49:36.081106 [debug] [ThreadPool]: On create_aact_main: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "connection_name": "create_aact_main"} */
+
+    
+    
+        create schema if not exists "aact"."main"
+    
+[0m17:49:36.081282 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:49:36.081520 [debug] [ThreadPool]: On create_aact_main: COMMIT
+[0m17:49:36.081601 [debug] [ThreadPool]: Using duckdb connection "create_aact_main"
+[0m17:49:36.081672 [debug] [ThreadPool]: On create_aact_main: COMMIT
+[0m17:49:36.081780 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:49:36.081852 [debug] [ThreadPool]: On create_aact_main: Close
+[0m17:49:36.082409 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_aact_main, now list_aact_main)
+[0m17:49:36.083784 [debug] [ThreadPool]: Using duckdb connection "list_aact_main"
+[0m17:49:36.083869 [debug] [ThreadPool]: On list_aact_main: BEGIN
+[0m17:49:36.083937 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:49:36.084069 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:49:36.084143 [debug] [ThreadPool]: Using duckdb connection "list_aact_main"
+[0m17:49:36.084218 [debug] [ThreadPool]: On list_aact_main: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "connection_name": "list_aact_main"} */
+select
+      'aact' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'aact'
+  
+[0m17:49:36.085045 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:49:36.085330 [debug] [ThreadPool]: On list_aact_main: ROLLBACK
+[0m17:49:36.085460 [debug] [ThreadPool]: On list_aact_main: Close
+[0m17:49:36.085636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11387ba10>]}
+[0m17:49:36.085773 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:36.085846 [debug] [MainThread]: On master: BEGIN
+[0m17:49:36.085910 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:49:36.086052 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:49:36.086137 [debug] [MainThread]: On master: COMMIT
+[0m17:49:36.086208 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:36.086271 [debug] [MainThread]: On master: COMMIT
+[0m17:49:36.086400 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:49:36.086512 [debug] [MainThread]: On master: Close
+[0m17:49:36.088356 [debug] [Thread-4 (]: Began running node model.clinical_trial_risk.stg_designs
+[0m17:49:36.088495 [debug] [Thread-3 (]: Began running node model.clinical_trial_risk.stg_countries
+[0m17:49:36.088983 [info ] [Thread-3 (]: 3 of 17 START sql view model main.stg_countries ................................ [RUN]
+[0m17:49:36.089140 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.clinical_trial_risk.stg_countries'
+[0m17:49:36.089237 [debug] [Thread-3 (]: Began compiling node model.clinical_trial_risk.stg_countries
+[0m17:49:36.091249 [debug] [Thread-3 (]: Writing injected SQL for node "model.clinical_trial_risk.stg_countries"
+[0m17:49:36.088670 [debug] [Thread-2 (]: Began running node model.clinical_trial_risk.stg_calculated_values
+[0m17:49:36.088802 [info ] [Thread-4 (]: 4 of 17 START sql view model main.stg_designs .................................. [RUN]
+[0m17:49:36.088587 [debug] [Thread-1 (]: Began running node model.clinical_trial_risk.stg_browse_conditions
+[0m17:49:36.091720 [info ] [Thread-1 (]: 1 of 17 START sql view model main.stg_browse_conditions ........................ [RUN]
+[0m17:49:36.091853 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_aact_main, now model.clinical_trial_risk.stg_browse_conditions)
+[0m17:49:36.091966 [debug] [Thread-1 (]: Began compiling node model.clinical_trial_risk.stg_browse_conditions
+[0m17:49:36.092529 [debug] [Thread-1 (]: Writing injected SQL for node "model.clinical_trial_risk.stg_browse_conditions"
+[0m17:49:36.091593 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.clinical_trial_risk.stg_designs'
+[0m17:49:36.091423 [info ] [Thread-2 (]: 2 of 17 START sql view model main.stg_calculated_values ........................ [RUN]
+[0m17:49:36.092819 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.clinical_trial_risk.stg_calculated_values'
+[0m17:49:36.092916 [debug] [Thread-2 (]: Began compiling node model.clinical_trial_risk.stg_calculated_values
+[0m17:49:36.093553 [debug] [Thread-2 (]: Writing injected SQL for node "model.clinical_trial_risk.stg_calculated_values"
+[0m17:49:36.092670 [debug] [Thread-4 (]: Began compiling node model.clinical_trial_risk.stg_designs
+[0m17:49:36.094089 [debug] [Thread-4 (]: Writing injected SQL for node "model.clinical_trial_risk.stg_designs"
+[0m17:49:36.094217 [debug] [Thread-3 (]: Began executing node model.clinical_trial_risk.stg_countries
+[0m17:49:36.094660 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_countries"
+[0m17:49:36.094782 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_countries: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_countries"} */
+select database_name, type from duckdb_databases()
+[0m17:49:36.094988 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:49:36.094894 [debug] [Thread-2 (]: Began executing node model.clinical_trial_risk.stg_calculated_values
+[0m17:49:36.094331 [debug] [Thread-1 (]: Began executing node model.clinical_trial_risk.stg_browse_conditions
+[0m17:49:36.095127 [debug] [Thread-4 (]: Began executing node model.clinical_trial_risk.stg_designs
+[0m17:49:36.095462 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.096154 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_countries"
+[0m17:49:36.096259 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_countries: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_countries"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('aact')
+                      and lower(schema_name) = lower('main')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m17:49:36.098268 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m17:49:36.107366 [debug] [Thread-3 (]: Writing runtime sql for node "model.clinical_trial_risk.stg_countries"
+[0m17:49:36.107904 [debug] [Thread-4 (]: Writing runtime sql for node "model.clinical_trial_risk.stg_designs"
+[0m17:49:36.108356 [debug] [Thread-2 (]: Writing runtime sql for node "model.clinical_trial_risk.stg_calculated_values"
+[0m17:49:36.108758 [debug] [Thread-1 (]: Writing runtime sql for node "model.clinical_trial_risk.stg_browse_conditions"
+[0m17:49:36.109269 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_countries"
+[0m17:49:36.109822 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_countries: BEGIN
+[0m17:49:36.109608 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_designs"
+[0m17:49:36.109941 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_designs: BEGIN
+[0m17:49:36.110045 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:49:36.109720 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_calculated_values"
+[0m17:49:36.110277 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_calculated_values: BEGIN
+[0m17:49:36.110376 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:49:36.109388 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_browse_conditions"
+[0m17:49:36.110601 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_browse_conditions: BEGIN
+[0m17:49:36.110697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:49:36.110176 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.110919 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_countries"
+[0m17:49:36.111018 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_countries: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_countries"} */
+
+  
+  create view "aact"."main"."stg_countries__dbt_tmp" as (
+    select
+    nct_id,
+    name                     as country,
+    coalesce(removed, false) as removed   -- true = country was dropped from the record later
+from "aact"."raw"."countries"
+  );
+
+[0m17:49:36.110471 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.111228 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_designs"
+[0m17:49:36.111324 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_designs: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_designs"} */
+
+  
+  create view "aact"."main"."stg_designs__dbt_tmp" as (
+    select
+    nct_id,
+    upper(allocation)         as allocation,
+    upper(intervention_model) as intervention_model,
+    upper(primary_purpose)    as primary_purpose,
+    upper(masking)            as masking
+from "aact"."raw"."designs"
+  );
+
+[0m17:49:36.111134 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.111449 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_browse_conditions"
+[0m17:49:36.111556 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_browse_conditions: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_browse_conditions"} */
+
+  
+  create view "aact"."main"."stg_browse_conditions__dbt_tmp" as (
+    select
+    nct_id,
+    downcase_mesh_term as mesh_term,
+    mesh_type                       -- 'mesh-list' (direct) or 'mesh-ancestor' (broader parent)
+from "aact"."raw"."browse_conditions"
+  );
+
+[0m17:49:36.110788 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.111882 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_calculated_values"
+[0m17:49:36.111998 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_calculated_values: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_calculated_values"} */
+
+  
+  create view "aact"."main"."stg_calculated_values__dbt_tmp" as (
+    select
+    nct_id,
+    registered_in_calendar_year as registration_year,
+    number_of_facilities,
+    has_us_facility,
+    has_single_facility,
+    
+    case lower(minimum_age_unit)
+        when 'year'   then minimum_age_num * 1.0
+        when 'month'  then minimum_age_num / 12.0
+        when 'week'   then minimum_age_num / 52.0
+        when 'day'    then minimum_age_num / 365.0
+        when 'hour'   then minimum_age_num / 8760.0
+        when 'minute' then minimum_age_num / 525600.0
+    end
+ as min_age_years,
+    
+    case lower(maximum_age_unit)
+        when 'year'   then maximum_age_num * 1.0
+        when 'month'  then maximum_age_num / 12.0
+        when 'week'   then maximum_age_num / 52.0
+        when 'day'    then maximum_age_num / 365.0
+        when 'hour'   then maximum_age_num / 8760.0
+        when 'minute' then maximum_age_num / 525600.0
+    end
+ as max_age_years
+from "aact"."raw"."calculated_values"
+  );
+
+[0m17:49:36.111657 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.113698 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_countries"
+[0m17:49:36.112142 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.111783 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.114893 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_designs"
+[0m17:49:36.115085 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_designs: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_designs"} */
+alter view "aact"."main"."stg_designs__dbt_tmp" rename to "stg_designs"
+[0m17:49:36.114993 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m17:49:36.113830 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_countries: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_countries"} */
+alter view "aact"."main"."stg_countries__dbt_tmp" rename to "stg_countries"
+[0m17:49:36.114406 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_browse_conditions"
+[0m17:49:36.115705 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_browse_conditions: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_browse_conditions"} */
+alter view "aact"."main"."stg_browse_conditions__dbt_tmp" rename to "stg_browse_conditions"
+[0m17:49:36.115577 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_calculated_values"
+[0m17:49:36.115845 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_calculated_values: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_calculated_values"} */
+alter view "aact"."main"."stg_calculated_values__dbt_tmp" rename to "stg_calculated_values"
+[0m17:49:36.116059 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.119751 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_countries: COMMIT
+[0m17:49:36.115959 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.116154 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.120599 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_browse_conditions: COMMIT
+[0m17:49:36.120694 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_browse_conditions"
+[0m17:49:36.120780 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_browse_conditions: COMMIT
+[0m17:49:36.119874 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_countries"
+[0m17:49:36.120901 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_countries: COMMIT
+[0m17:49:36.120297 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_designs: COMMIT
+[0m17:49:36.121014 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_designs"
+[0m17:49:36.119967 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m17:49:36.121406 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_calculated_values: COMMIT
+[0m17:49:36.121596 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_calculated_values"
+[0m17:49:36.121689 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_calculated_values: COMMIT
+[0m17:49:36.121107 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_designs: COMMIT
+[0m17:49:36.121507 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.123330 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_browse_conditions"
+[0m17:49:36.121779 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.123931 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_countries"
+[0m17:49:36.124030 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_countries: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_countries"} */
+
+      drop view if exists "aact"."main"."stg_countries__dbt_backup" cascade
+    
+[0m17:49:36.123560 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m17:49:36.124531 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_calculated_values"
+[0m17:49:36.123463 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_browse_conditions: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_browse_conditions"} */
+
+      drop view if exists "aact"."main"."stg_browse_conditions__dbt_backup" cascade
+    
+[0m17:49:36.124132 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m17:49:36.125151 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_designs"
+[0m17:49:36.125252 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_designs: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_designs"} */
+
+      drop view if exists "aact"."main"."stg_designs__dbt_backup" cascade
+    
+[0m17:49:36.124636 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_calculated_values: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_calculated_values"} */
+
+      drop view if exists "aact"."main"."stg_calculated_values__dbt_backup" cascade
+    
+[0m17:49:36.125350 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.126083 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_browse_conditions: Close
+[0m17:49:36.124756 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.126860 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_countries: Close
+[0m17:49:36.126273 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.127521 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_calculated_values: Close
+[0m17:49:36.126190 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.127935 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_designs: Close
+[0m17:49:36.128233 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11509a150>]}
+[0m17:49:36.128344 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115135c70>]}
+[0m17:49:36.128947 [info ] [Thread-3 (]: 3 of 17 OK created sql view model main.stg_countries ........................... [[32mOK[0m in 0.04s]
+[0m17:49:36.129126 [debug] [Thread-3 (]: Finished running node model.clinical_trial_risk.stg_countries
+[0m17:49:36.129242 [debug] [Thread-3 (]: Began running node model.clinical_trial_risk.stg_eligibilities
+[0m17:49:36.129404 [info ] [Thread-3 (]: 5 of 17 START sql view model main.stg_eligibilities ............................ [RUN]
+[0m17:49:36.129548 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.stg_countries, now model.clinical_trial_risk.stg_eligibilities)
+[0m17:49:36.129651 [debug] [Thread-3 (]: Began compiling node model.clinical_trial_risk.stg_eligibilities
+[0m17:49:36.130258 [debug] [Thread-3 (]: Writing injected SQL for node "model.clinical_trial_risk.stg_eligibilities"
+[0m17:49:36.128666 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11502b6e0>]}
+[0m17:49:36.128782 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079e86d0>]}
+[0m17:49:36.128570 [info ] [Thread-1 (]: 1 of 17 OK created sql view model main.stg_browse_conditions ................... [[32mOK[0m in 0.03s]
+[0m17:49:36.130876 [debug] [Thread-1 (]: Finished running node model.clinical_trial_risk.stg_browse_conditions
+[0m17:49:36.130990 [debug] [Thread-1 (]: Began running node model.clinical_trial_risk.stg_interventions
+[0m17:49:36.131134 [info ] [Thread-1 (]: 6 of 17 START sql view model main.stg_interventions ............................ [RUN]
+[0m17:49:36.131377 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.stg_browse_conditions, now model.clinical_trial_risk.stg_interventions)
+[0m17:49:36.131477 [debug] [Thread-1 (]: Began compiling node model.clinical_trial_risk.stg_interventions
+[0m17:49:36.131951 [debug] [Thread-1 (]: Writing injected SQL for node "model.clinical_trial_risk.stg_interventions"
+[0m17:49:36.130688 [info ] [Thread-4 (]: 4 of 17 OK created sql view model main.stg_designs ............................. [[32mOK[0m in 0.04s]
+[0m17:49:36.130478 [info ] [Thread-2 (]: 2 of 17 OK created sql view model main.stg_calculated_values ................... [[32mOK[0m in 0.03s]
+[0m17:49:36.132280 [debug] [Thread-2 (]: Finished running node model.clinical_trial_risk.stg_calculated_values
+[0m17:49:36.132385 [debug] [Thread-2 (]: Began running node model.clinical_trial_risk.stg_sponsors
+[0m17:49:36.131263 [debug] [Thread-3 (]: Began executing node model.clinical_trial_risk.stg_eligibilities
+[0m17:49:36.133267 [debug] [Thread-3 (]: Writing runtime sql for node "model.clinical_trial_risk.stg_eligibilities"
+[0m17:49:36.132501 [info ] [Thread-2 (]: 7 of 17 START sql view model main.stg_sponsors ................................. [RUN]
+[0m17:49:36.133440 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.stg_calculated_values, now model.clinical_trial_risk.stg_sponsors)
+[0m17:49:36.132128 [debug] [Thread-4 (]: Finished running node model.clinical_trial_risk.stg_designs
+[0m17:49:36.132625 [debug] [Thread-1 (]: Began executing node model.clinical_trial_risk.stg_interventions
+[0m17:49:36.134554 [debug] [Thread-1 (]: Writing runtime sql for node "model.clinical_trial_risk.stg_interventions"
+[0m17:49:36.133790 [debug] [Thread-2 (]: Began compiling node model.clinical_trial_risk.stg_sponsors
+[0m17:49:36.135215 [debug] [Thread-2 (]: Writing injected SQL for node "model.clinical_trial_risk.stg_sponsors"
+[0m17:49:36.133921 [debug] [Thread-4 (]: Began running node model.clinical_trial_risk.stg_studies
+[0m17:49:36.135390 [info ] [Thread-4 (]: 8 of 17 START sql view model main.stg_studies .................................. [RUN]
+[0m17:49:36.135520 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.stg_designs, now model.clinical_trial_risk.stg_studies)
+[0m17:49:36.135739 [debug] [Thread-4 (]: Began compiling node model.clinical_trial_risk.stg_studies
+[0m17:49:36.134672 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_eligibilities"
+[0m17:49:36.136313 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_eligibilities: BEGIN
+[0m17:49:36.136505 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:49:36.136412 [debug] [Thread-2 (]: Began executing node model.clinical_trial_risk.stg_sponsors
+[0m17:49:36.137147 [debug] [Thread-2 (]: Writing runtime sql for node "model.clinical_trial_risk.stg_sponsors"
+[0m17:49:36.136203 [debug] [Thread-4 (]: Writing injected SQL for node "model.clinical_trial_risk.stg_studies"
+[0m17:49:36.135632 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_interventions"
+[0m17:49:36.137412 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_interventions: BEGIN
+[0m17:49:36.137500 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:49:36.137309 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.137624 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_eligibilities"
+[0m17:49:36.137743 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_eligibilities: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_eligibilities"} */
+
+  
+  create view "aact"."main"."stg_eligibilities__dbt_tmp" as (
+    select
+    nct_id,
+    upper(gender)       as gender,
+    healthy_volunteers,
+    length(criteria)    as criteria_length
+from "aact"."raw"."eligibilities"
+  );
+
+[0m17:49:36.138063 [debug] [Thread-4 (]: Began executing node model.clinical_trial_risk.stg_studies
+[0m17:49:36.138795 [debug] [Thread-4 (]: Writing runtime sql for node "model.clinical_trial_risk.stg_studies"
+[0m17:49:36.138917 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.139446 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_eligibilities"
+[0m17:49:36.137859 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_sponsors"
+[0m17:49:36.137959 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.139851 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_interventions"
+[0m17:49:36.139941 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_interventions: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_interventions"} */
+
+  
+  create view "aact"."main"."stg_interventions__dbt_tmp" as (
+    select
+    nct_id,
+    upper(intervention_type) as intervention_type
+from "aact"."raw"."interventions"
+  );
+
+[0m17:49:36.139765 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_studies"
+[0m17:49:36.140058 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_studies: BEGIN
+[0m17:49:36.140149 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:49:36.139655 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_sponsors: BEGIN
+[0m17:49:36.140277 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:49:36.140501 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.140978 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_interventions"
+[0m17:49:36.139548 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_eligibilities: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_eligibilities"} */
+alter view "aact"."main"."stg_eligibilities__dbt_tmp" rename to "stg_eligibilities"
+[0m17:49:36.140385 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.141279 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_studies"
+[0m17:49:36.141392 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_studies: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_studies"} */
+
+  
+  create view "aact"."main"."stg_studies__dbt_tmp" as (
+    select
+    nct_id,
+    upper(overall_status)   as overall_status,
+    upper(study_type)       as study_type,
+    upper(phase)            as phase,
+    enrollment,
+    enrollment_type,
+    cast(start_date as date)      as start_date,
+    cast(completion_date as date) as completion_date,
+    number_of_arms,
+    has_dmc
+from "aact"."raw"."studies"
+  );
+
+[0m17:49:36.141161 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.141592 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_sponsors"
+[0m17:49:36.141692 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_sponsors: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_sponsors"} */
+
+  
+  create view "aact"."main"."stg_sponsors__dbt_tmp" as (
+    select
+    nct_id,
+    name                         as sponsor_name,
+    upper(agency_class)          as agency_class,
+    lower(lead_or_collaborator)  as sponsor_role   -- 'lead' or 'collaborator'
+from "aact"."raw"."sponsors"
+  );
+
+[0m17:49:36.141489 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.142065 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_eligibilities: COMMIT
+[0m17:49:36.141079 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_interventions: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_interventions"} */
+alter view "aact"."main"."stg_interventions__dbt_tmp" rename to "stg_interventions"
+[0m17:49:36.142361 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.142827 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_sponsors"
+[0m17:49:36.142925 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_sponsors: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_sponsors"} */
+alter view "aact"."main"."stg_sponsors__dbt_tmp" rename to "stg_sponsors"
+[0m17:49:36.142275 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.143498 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_studies"
+[0m17:49:36.142174 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_eligibilities"
+[0m17:49:36.143756 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_eligibilities: COMMIT
+[0m17:49:36.143595 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_studies: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_studies"} */
+alter view "aact"."main"."stg_studies__dbt_tmp" rename to "stg_studies"
+[0m17:49:36.143674 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.144102 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_sponsors: COMMIT
+[0m17:49:36.143020 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.144676 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_interventions: COMMIT
+[0m17:49:36.144769 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_interventions"
+[0m17:49:36.144857 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_interventions: COMMIT
+[0m17:49:36.144200 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_sponsors"
+[0m17:49:36.144971 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_sponsors: COMMIT
+[0m17:49:36.145082 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.145430 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.stg_interventions"
+[0m17:49:36.144388 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.146023 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.stg_eligibilities"
+[0m17:49:36.144291 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.146527 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_studies: COMMIT
+[0m17:49:36.145532 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_interventions: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_interventions"} */
+
+      drop view if exists "aact"."main"."stg_interventions__dbt_backup" cascade
+    
+[0m17:49:36.146204 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.146981 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.stg_sponsors"
+[0m17:49:36.147081 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_sponsors: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_sponsors"} */
+
+      drop view if exists "aact"."main"."stg_sponsors__dbt_backup" cascade
+    
+[0m17:49:36.146620 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_studies"
+[0m17:49:36.147201 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_studies: COMMIT
+[0m17:49:36.146123 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_eligibilities: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_eligibilities"} */
+
+      drop view if exists "aact"."main"."stg_eligibilities__dbt_backup" cascade
+    
+[0m17:49:36.147356 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.147676 [debug] [Thread-1 (]: On model.clinical_trial_risk.stg_interventions: Close
+[0m17:49:36.147785 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.148326 [debug] [Thread-3 (]: On model.clinical_trial_risk.stg_eligibilities: Close
+[0m17:49:36.148562 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1151231d0>]}
+[0m17:49:36.148421 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.149148 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.stg_studies"
+[0m17:49:36.148031 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115123590>]}
+[0m17:49:36.149413 [info ] [Thread-1 (]: 6 of 17 OK created sql view model main.stg_interventions ....................... [[32mOK[0m in 0.02s]
+[0m17:49:36.147886 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.149895 [debug] [Thread-2 (]: On model.clinical_trial_risk.stg_sponsors: Close
+[0m17:49:36.148742 [info ] [Thread-3 (]: 5 of 17 OK created sql view model main.stg_eligibilities ....................... [[32mOK[0m in 0.02s]
+[0m17:49:36.150163 [debug] [Thread-3 (]: Finished running node model.clinical_trial_risk.stg_eligibilities
+[0m17:49:36.149245 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_studies: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.stg_studies"} */
+
+      drop view if exists "aact"."main"."stg_studies__dbt_backup" cascade
+    
+[0m17:49:36.150027 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1151237d0>]}
+[0m17:49:36.150370 [info ] [Thread-2 (]: 7 of 17 OK created sql view model main.stg_sponsors ............................ [[32mOK[0m in 0.02s]
+[0m17:49:36.150533 [debug] [Thread-2 (]: Finished running node model.clinical_trial_risk.stg_sponsors
+[0m17:49:36.149575 [debug] [Thread-1 (]: Finished running node model.clinical_trial_risk.stg_interventions
+[0m17:49:36.150630 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.150991 [debug] [Thread-4 (]: On model.clinical_trial_risk.stg_studies: Close
+[0m17:49:36.151117 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115123fb0>]}
+[0m17:49:36.151257 [info ] [Thread-4 (]: 8 of 17 OK created sql view model main.stg_studies ............................. [[32mOK[0m in 0.02s]
+[0m17:49:36.151405 [debug] [Thread-4 (]: Finished running node model.clinical_trial_risk.stg_studies
+[0m17:49:36.151648 [debug] [Thread-3 (]: Began running node model.clinical_trial_risk.int_cohort
+[0m17:49:36.151874 [info ] [Thread-3 (]: 9 of 17 START sql table model main.int_cohort .................................. [RUN]
+[0m17:49:36.152027 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.stg_eligibilities, now model.clinical_trial_risk.int_cohort)
+[0m17:49:36.152124 [debug] [Thread-3 (]: Began compiling node model.clinical_trial_risk.int_cohort
+[0m17:49:36.152664 [debug] [Thread-3 (]: Writing injected SQL for node "model.clinical_trial_risk.int_cohort"
+[0m17:49:36.151756 [debug] [Thread-2 (]: Began running node model.clinical_trial_risk.int_trial_aggregates
+[0m17:49:36.152812 [info ] [Thread-2 (]: 10 of 17 START sql table model main.int_trial_aggregates ....................... [RUN]
+[0m17:49:36.152952 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.stg_sponsors, now model.clinical_trial_risk.int_trial_aggregates)
+[0m17:49:36.153050 [debug] [Thread-2 (]: Began compiling node model.clinical_trial_risk.int_trial_aggregates
+[0m17:49:36.153933 [debug] [Thread-2 (]: Writing injected SQL for node "model.clinical_trial_risk.int_trial_aggregates"
+[0m17:49:36.154078 [debug] [Thread-3 (]: Began executing node model.clinical_trial_risk.int_cohort
+[0m17:49:36.166756 [debug] [Thread-2 (]: Began executing node model.clinical_trial_risk.int_trial_aggregates
+[0m17:49:36.169790 [debug] [Thread-2 (]: Writing runtime sql for node "model.clinical_trial_risk.int_trial_aggregates"
+[0m17:49:36.169072 [debug] [Thread-3 (]: Writing runtime sql for node "model.clinical_trial_risk.int_cohort"
+[0m17:49:36.170111 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.int_trial_aggregates"
+[0m17:49:36.170321 [debug] [Thread-2 (]: On model.clinical_trial_risk.int_trial_aggregates: BEGIN
+[0m17:49:36.170410 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:49:36.170222 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.int_cohort"
+[0m17:49:36.170541 [debug] [Thread-3 (]: On model.clinical_trial_risk.int_cohort: BEGIN
+[0m17:49:36.170733 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:49:36.170647 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.170855 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.int_trial_aggregates"
+[0m17:49:36.170993 [debug] [Thread-2 (]: On model.clinical_trial_risk.int_trial_aggregates: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.int_trial_aggregates"} */
+
+    
+
+    create  table
+      "aact"."main"."int_trial_aggregates__dbt_tmp"
+  
+    
+    as (
+      -- Collapses the four one-to-many tables to exactly one row per trial.
+
+with sponsor_agg as (
+    select
+        nct_id,
+        max(sponsor_name) filter (where sponsor_role = 'lead')  as lead_sponsor_name,
+        max(agency_class) filter (where sponsor_role = 'lead')  as lead_agency_class,
+        count(*) filter (where sponsor_role = 'collaborator')   as n_collaborators
+    from "aact"."main"."stg_sponsors"
+    group by nct_id
+),
+
+intervention_agg as (
+    select
+        nct_id,
+        -- e.g. ['DRUG','PLACEBO','DRUG'] -> 'DRUG|PLACEBO'
+        array_to_string(list_sort(list_distinct(list(intervention_type))), '|') as intervention_types,
+        count(*) as n_interventions
+    from "aact"."main"."stg_interventions"
+    group by nct_id
+),
+
+country_agg as (
+    select
+        nct_id,
+        count(distinct country) filter (where not removed) as n_countries
+    from "aact"."main"."stg_countries"
+    group by nct_id
+),
+
+-- Top-level MeSH disease headings -> one therapeutic area per trial.
+-- priority breaks ties when a trial touches several areas (lower wins).
+area_map as (
+    select * from (values
+        ('neoplasms',                                              'oncology',         1),
+        ('cardiovascular diseases',                                'cardiovascular',   2),
+        ('infections',                                             'infectious',       3),
+        ('bacterial infections and mycoses',                       'infectious',       3),
+        ('virus diseases',                                         'infectious',       3),
+        ('parasitic diseases',                                     'infectious',       3),
+        ('mental disorders',                                       'mental_health',    4),
+        ('nervous system diseases',                                'neurology',        5),
+        ('respiratory tract diseases',                             'respiratory',      6),
+        ('digestive system diseases',                              'digestive',        7),
+        ('nutritional and metabolic diseases',                     'metabolic',        8),
+        ('endocrine system diseases',                              'endocrine',        9),
+        ('immune system diseases',                                 'immune',          10),
+        ('musculoskeletal diseases',                               'musculoskeletal', 11),
+        ('skin and connective tissue diseases',                    'skin',            12),
+        ('eye diseases',                                           'eye',             13),
+        ('urogenital diseases',                                    'urogenital',      14),
+        ('female urogenital diseases and pregnancy complications', 'urogenital',      14),
+        ('male urogenital diseases',                               'urogenital',      14),
+        ('hemic and lymphatic diseases',                           'blood',           15),
+        ('wounds and injuries',                                    'injury',          16)
+    ) as t(mesh_term, mesh_area, priority)
+),
+
+mesh_agg as (
+    select
+        b.nct_id,
+        arg_min(a.mesh_area, a.priority) as mesh_area   -- area with the lowest priority number
+    from "aact"."main"."stg_browse_conditions" b
+    join area_map a on b.mesh_term = a.mesh_term
+    group by b.nct_id
+)
+
+select
+    s.nct_id,
+    sp.lead_sponsor_name,
+    sp.lead_agency_class,
+    coalesce(sp.n_collaborators, 0) as n_collaborators,
+    iv.intervention_types,
+    coalesce(iv.n_interventions, 0) as n_interventions,
+    coalesce(co.n_countries, 0)     as n_countries,
+    m.mesh_area
+from "aact"."main"."stg_studies" s
+left join sponsor_agg      sp using (nct_id)
+left join intervention_agg iv using (nct_id)
+left join country_agg      co using (nct_id)
+left join mesh_agg         m  using (nct_id)
+    );
+    
+  
+[0m17:49:36.171134 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.171240 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.int_cohort"
+[0m17:49:36.171331 [debug] [Thread-3 (]: On model.clinical_trial_risk.int_cohort: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.int_cohort"} */
+
+    
+
+    create  table
+      "aact"."main"."int_cohort__dbt_tmp"
+  
+    
+    as (
+      -- The modeling population plus the label. Defined once, reused everywhere.
+select
+    nct_id,
+    overall_status,
+    study_type,
+    enrollment,
+    start_date,
+    completion_date,
+    overall_status in ('TERMINATED', 'WITHDRAWN') as at_risk
+from "aact"."main"."stg_studies"
+where study_type = 'INTERVENTIONAL'
+  and overall_status in ('COMPLETED', 'TERMINATED', 'WITHDRAWN')
+    );
+    
+  
+[0m17:49:36.272435 [debug] [Thread-3 (]: SQL status: OK in 0.101 seconds
+[0m17:49:36.273639 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.int_cohort"
+[0m17:49:36.273774 [debug] [Thread-3 (]: On model.clinical_trial_risk.int_cohort: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.int_cohort"} */
+alter table "aact"."main"."int_cohort__dbt_tmp" rename to "int_cohort"
+[0m17:49:36.274087 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.276646 [debug] [Thread-3 (]: On model.clinical_trial_risk.int_cohort: COMMIT
+[0m17:49:36.276819 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.int_cohort"
+[0m17:49:36.276913 [debug] [Thread-3 (]: On model.clinical_trial_risk.int_cohort: COMMIT
+[0m17:49:36.278151 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.278839 [debug] [Thread-3 (]: Using duckdb connection "model.clinical_trial_risk.int_cohort"
+[0m17:49:36.278958 [debug] [Thread-3 (]: On model.clinical_trial_risk.int_cohort: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.int_cohort"} */
+
+      drop table if exists "aact"."main"."int_cohort__dbt_backup" cascade
+    
+[0m17:49:36.279218 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.279779 [debug] [Thread-3 (]: On model.clinical_trial_risk.int_cohort: Close
+[0m17:49:36.280040 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115178e90>]}
+[0m17:49:36.280318 [info ] [Thread-3 (]: 9 of 17 OK created sql table model main.int_cohort ............................. [[32mOK[0m in 0.13s]
+[0m17:49:36.280497 [debug] [Thread-3 (]: Finished running node model.clinical_trial_risk.int_cohort
+[0m17:49:36.405806 [debug] [Thread-2 (]: SQL status: OK in 0.235 seconds
+[0m17:49:36.406614 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.int_trial_aggregates"
+[0m17:49:36.406727 [debug] [Thread-2 (]: On model.clinical_trial_risk.int_trial_aggregates: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.int_trial_aggregates"} */
+alter table "aact"."main"."int_trial_aggregates__dbt_tmp" rename to "int_trial_aggregates"
+[0m17:49:36.407025 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.407494 [debug] [Thread-2 (]: On model.clinical_trial_risk.int_trial_aggregates: COMMIT
+[0m17:49:36.407604 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.int_trial_aggregates"
+[0m17:49:36.407697 [debug] [Thread-2 (]: On model.clinical_trial_risk.int_trial_aggregates: COMMIT
+[0m17:49:36.408381 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.409091 [debug] [Thread-2 (]: Using duckdb connection "model.clinical_trial_risk.int_trial_aggregates"
+[0m17:49:36.409195 [debug] [Thread-2 (]: On model.clinical_trial_risk.int_trial_aggregates: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.int_trial_aggregates"} */
+
+      drop table if exists "aact"."main"."int_trial_aggregates__dbt_backup" cascade
+    
+[0m17:49:36.409474 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.409865 [debug] [Thread-2 (]: On model.clinical_trial_risk.int_trial_aggregates: Close
+[0m17:49:36.410052 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1151237d0>]}
+[0m17:49:36.410245 [info ] [Thread-2 (]: 10 of 17 OK created sql table model main.int_trial_aggregates .................. [[32mOK[0m in 0.26s]
+[0m17:49:36.410406 [debug] [Thread-2 (]: Finished running node model.clinical_trial_risk.int_trial_aggregates
+[0m17:49:36.410655 [debug] [Thread-1 (]: Began running node model.clinical_trial_risk.int_sponsor_history
+[0m17:49:36.410799 [info ] [Thread-1 (]: 11 of 17 START sql table model main.int_sponsor_history ........................ [RUN]
+[0m17:49:36.410924 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.stg_interventions, now model.clinical_trial_risk.int_sponsor_history)
+[0m17:49:36.411016 [debug] [Thread-1 (]: Began compiling node model.clinical_trial_risk.int_sponsor_history
+[0m17:49:36.411749 [debug] [Thread-1 (]: Writing injected SQL for node "model.clinical_trial_risk.int_sponsor_history"
+[0m17:49:36.412003 [debug] [Thread-1 (]: Began executing node model.clinical_trial_risk.int_sponsor_history
+[0m17:49:36.412769 [debug] [Thread-1 (]: Writing runtime sql for node "model.clinical_trial_risk.int_sponsor_history"
+[0m17:49:36.412971 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.int_sponsor_history"
+[0m17:49:36.413059 [debug] [Thread-1 (]: On model.clinical_trial_risk.int_sponsor_history: BEGIN
+[0m17:49:36.413146 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:49:36.413340 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.413437 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.int_sponsor_history"
+[0m17:49:36.413575 [debug] [Thread-1 (]: On model.clinical_trial_risk.int_sponsor_history: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.int_sponsor_history"} */
+
+    
+
+    create  table
+      "aact"."main"."int_sponsor_history__dbt_tmp"
+  
+    
+    as (
+      -- For each trial: the lead sponsor's stop rate among its trials that ENDED
+-- BEFORE this trial STARTED. Only the past is used, so no leakage.
+
+with cohort as (
+    select
+        c.nct_id,
+        a.lead_sponsor_name,
+        c.start_date,
+        c.completion_date,
+        c.at_risk
+    from "aact"."main"."int_cohort" c
+    join "aact"."main"."int_trial_aggregates" a using (nct_id)
+    where a.lead_sponsor_name is not null
+),
+
+-- Running totals per sponsor, ordered by end date. Trials sharing an end date
+-- get the same totals (the default window frame includes ties), and DISTINCT
+-- keeps one row per (sponsor, end date).
+ended as (
+    select distinct
+        lead_sponsor_name,
+        completion_date            as end_date,
+        count(*)          over w   as n_ended_so_far,
+        sum(at_risk::int) over w   as n_stopped_so_far
+    from cohort
+    where completion_date is not null
+    window w as (partition by lead_sponsor_name order by completion_date)
+)
+
+-- ASOF join: for each trial, take the latest row in `ended` for the same
+-- sponsor whose end_date is strictly before this trial's start_date.
+select
+    c.nct_id,
+    coalesce(e.n_ended_so_far, 0)                  as sponsor_prior_n,
+    e.n_stopped_so_far::double / e.n_ended_so_far  as sponsor_prior_stop_rate  -- null if no history
+from cohort c
+asof left join ended e
+    on  c.lead_sponsor_name = e.lead_sponsor_name
+    and c.start_date > e.end_date
+    );
+    
+  
+[0m17:49:36.489918 [debug] [Thread-1 (]: SQL status: OK in 0.076 seconds
+[0m17:49:36.490744 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.int_sponsor_history"
+[0m17:49:36.490857 [debug] [Thread-1 (]: On model.clinical_trial_risk.int_sponsor_history: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.int_sponsor_history"} */
+alter table "aact"."main"."int_sponsor_history__dbt_tmp" rename to "int_sponsor_history"
+[0m17:49:36.491145 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.491593 [debug] [Thread-1 (]: On model.clinical_trial_risk.int_sponsor_history: COMMIT
+[0m17:49:36.491698 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.int_sponsor_history"
+[0m17:49:36.491783 [debug] [Thread-1 (]: On model.clinical_trial_risk.int_sponsor_history: COMMIT
+[0m17:49:36.492518 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:49:36.492971 [debug] [Thread-1 (]: Using duckdb connection "model.clinical_trial_risk.int_sponsor_history"
+[0m17:49:36.493075 [debug] [Thread-1 (]: On model.clinical_trial_risk.int_sponsor_history: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.int_sponsor_history"} */
+
+      drop table if exists "aact"."main"."int_sponsor_history__dbt_backup" cascade
+    
+[0m17:49:36.493249 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.493625 [debug] [Thread-1 (]: On model.clinical_trial_risk.int_sponsor_history: Close
+[0m17:49:36.493813 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115178bf0>]}
+[0m17:49:36.494006 [info ] [Thread-1 (]: 11 of 17 OK created sql table model main.int_sponsor_history ................... [[32mOK[0m in 0.08s]
+[0m17:49:36.494164 [debug] [Thread-1 (]: Finished running node model.clinical_trial_risk.int_sponsor_history
+[0m17:49:36.494359 [debug] [Thread-4 (]: Began running node model.clinical_trial_risk.mart_trial_analysis
+[0m17:49:36.494532 [info ] [Thread-4 (]: 12 of 17 START sql table model main.mart_trial_analysis ........................ [RUN]
+[0m17:49:36.494698 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.stg_studies, now model.clinical_trial_risk.mart_trial_analysis)
+[0m17:49:36.494799 [debug] [Thread-4 (]: Began compiling node model.clinical_trial_risk.mart_trial_analysis
+[0m17:49:36.496145 [debug] [Thread-4 (]: Writing injected SQL for node "model.clinical_trial_risk.mart_trial_analysis"
+[0m17:49:36.496450 [debug] [Thread-4 (]: Began executing node model.clinical_trial_risk.mart_trial_analysis
+[0m17:49:36.497217 [debug] [Thread-4 (]: Writing runtime sql for node "model.clinical_trial_risk.mart_trial_analysis"
+[0m17:49:36.497450 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.mart_trial_analysis"
+[0m17:49:36.497542 [debug] [Thread-4 (]: On model.clinical_trial_risk.mart_trial_analysis: BEGIN
+[0m17:49:36.497623 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:49:36.497792 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:36.497883 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.mart_trial_analysis"
+[0m17:49:36.497986 [debug] [Thread-4 (]: On model.clinical_trial_risk.mart_trial_analysis: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.mart_trial_analysis"} */
+
+    
+
+    create  table
+      "aact"."main"."mart_trial_analysis__dbt_tmp"
+  
+    
+    as (
+      -- One row per trial in the cohort. Everything downstream reads this table.
+select
+    -- id, label, and cohort columns (NOT model inputs)
+    c.nct_id,
+    c.at_risk,
+    c.overall_status,
+    c.study_type,
+    c.enrollment,
+    cv.registration_year,                -- split key
+
+    -- design
+    st.phase,
+    d.allocation,
+    d.intervention_model,
+    d.primary_purpose,
+    d.masking,
+    st.number_of_arms,
+    st.has_dmc,
+
+    -- eligibility
+    e.gender,
+    e.healthy_volunteers,
+    cv.min_age_years,
+    cv.max_age_years,
+    e.criteria_length,
+
+    -- sites and geography
+    cv.number_of_facilities,
+    cv.has_us_facility,
+    cv.has_single_facility,
+    a.n_countries,
+
+    -- sponsor
+    a.lead_sponsor_name,
+    a.lead_agency_class,
+    a.n_collaborators,
+    sh.sponsor_prior_n,
+    sh.sponsor_prior_stop_rate,
+
+    -- condition and intervention
+    a.mesh_area,
+    a.intervention_types,
+    a.n_interventions
+
+from "aact"."main"."int_cohort" c
+join      "aact"."main"."stg_studies"           st using (nct_id)
+left join "aact"."main"."stg_calculated_values" cv using (nct_id)
+left join "aact"."main"."stg_designs"           d  using (nct_id)
+left join "aact"."main"."stg_eligibilities"     e  using (nct_id)
+left join "aact"."main"."int_trial_aggregates"  a  using (nct_id)
+left join "aact"."main"."int_sponsor_history"   sh using (nct_id)
+    );
+    
+  
+[0m17:49:37.094724 [debug] [Thread-4 (]: SQL status: OK in 0.597 seconds
+[0m17:49:37.095787 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.mart_trial_analysis"
+[0m17:49:37.095914 [debug] [Thread-4 (]: On model.clinical_trial_risk.mart_trial_analysis: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.mart_trial_analysis"} */
+alter table "aact"."main"."mart_trial_analysis__dbt_tmp" rename to "mart_trial_analysis"
+[0m17:49:37.096214 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:37.096619 [debug] [Thread-4 (]: On model.clinical_trial_risk.mart_trial_analysis: COMMIT
+[0m17:49:37.096716 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.mart_trial_analysis"
+[0m17:49:37.096800 [debug] [Thread-4 (]: On model.clinical_trial_risk.mart_trial_analysis: COMMIT
+[0m17:49:37.098134 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:49:37.098530 [debug] [Thread-4 (]: Using duckdb connection "model.clinical_trial_risk.mart_trial_analysis"
+[0m17:49:37.098625 [debug] [Thread-4 (]: On model.clinical_trial_risk.mart_trial_analysis: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "model.clinical_trial_risk.mart_trial_analysis"} */
+
+      drop table if exists "aact"."main"."mart_trial_analysis__dbt_backup" cascade
+    
+[0m17:49:37.098808 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:37.099211 [debug] [Thread-4 (]: On model.clinical_trial_risk.mart_trial_analysis: Close
+[0m17:49:37.099394 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f63c3ca-99d4-4291-a628-4583e0f05cf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115123830>]}
+[0m17:49:37.099587 [info ] [Thread-4 (]: 12 of 17 OK created sql table model main.mart_trial_analysis ................... [[32mOK[0m in 0.60s]
+[0m17:49:37.099763 [debug] [Thread-4 (]: Finished running node model.clinical_trial_risk.mart_trial_analysis
+[0m17:49:37.100073 [debug] [Thread-3 (]: Began running node test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386
+[0m17:49:37.100532 [info ] [Thread-3 (]: 13 of 17 START test accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN  [RUN]
+[0m17:49:37.100674 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.int_cohort, now test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386)
+[0m17:49:37.100784 [debug] [Thread-3 (]: Began compiling node test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386
+[0m17:49:37.103996 [debug] [Thread-3 (]: Writing injected SQL for node "test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386"
+[0m17:49:37.100230 [debug] [Thread-2 (]: Began running node test.clinical_trial_risk.at_risk_has_both_values
+[0m17:49:37.100437 [debug] [Thread-1 (]: Began running node test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c
+[0m17:49:37.100347 [debug] [Thread-4 (]: Began running node test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec
+[0m17:49:37.104506 [info ] [Thread-4 (]: 16 of 17 START test not_null_mart_trial_analysis_nct_id ........................ [RUN]
+[0m17:49:37.104646 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.mart_trial_analysis, now test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec)
+[0m17:49:37.104761 [debug] [Thread-4 (]: Began compiling node test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec
+[0m17:49:37.107964 [debug] [Thread-4 (]: Writing injected SQL for node "test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec"
+[0m17:49:37.104184 [info ] [Thread-2 (]: 14 of 17 START test at_risk_has_both_values .................................... [RUN]
+[0m17:49:37.104362 [info ] [Thread-1 (]: 15 of 17 START test not_null_mart_trial_analysis_at_risk ....................... [RUN]
+[0m17:49:37.108403 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.int_sponsor_history, now test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c)
+[0m17:49:37.108509 [debug] [Thread-1 (]: Began compiling node test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c
+[0m17:49:37.110376 [debug] [Thread-1 (]: Writing injected SQL for node "test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c"
+[0m17:49:37.108258 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.clinical_trial_risk.int_trial_aggregates, now test.clinical_trial_risk.at_risk_has_both_values)
+[0m17:49:37.108619 [debug] [Thread-4 (]: Began executing node test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec
+[0m17:49:37.108108 [debug] [Thread-3 (]: Began executing node test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386
+[0m17:49:37.110514 [debug] [Thread-2 (]: Began compiling node test.clinical_trial_risk.at_risk_has_both_values
+[0m17:49:37.111596 [debug] [Thread-2 (]: Writing injected SQL for node "test.clinical_trial_risk.at_risk_has_both_values"
+[0m17:49:37.111146 [debug] [Thread-1 (]: Began executing node test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c
+[0m17:49:37.110830 [debug] [Thread-4 (]: Using duckdb connection "test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec"
+[0m17:49:37.111921 [debug] [Thread-4 (]: On test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('aact')
+                      and lower(schema_name) = lower('main_dbt_test__audit')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m17:49:37.112027 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:49:37.112202 [debug] [Thread-2 (]: Began executing node test.clinical_trial_risk.at_risk_has_both_values
+[0m17:49:37.112585 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:49:37.118137 [debug] [Thread-4 (]: Writing runtime sql for node "test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec"
+[0m17:49:37.118706 [debug] [Thread-3 (]: Writing runtime sql for node "test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386"
+[0m17:49:37.118949 [debug] [Thread-1 (]: Writing runtime sql for node "test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c"
+[0m17:49:37.118439 [debug] [Thread-2 (]: Writing runtime sql for node "test.clinical_trial_risk.at_risk_has_both_values"
+[0m17:49:37.119252 [debug] [Thread-3 (]: Using duckdb connection "test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386"
+[0m17:49:37.119485 [debug] [Thread-3 (]: On test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386: BEGIN
+[0m17:49:37.119586 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:49:37.119739 [debug] [Thread-4 (]: Using duckdb connection "test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec"
+[0m17:49:37.119864 [debug] [Thread-4 (]: On test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec: BEGIN
+[0m17:49:37.119987 [debug] [Thread-2 (]: Using duckdb connection "test.clinical_trial_risk.at_risk_has_both_values"
+[0m17:49:37.120208 [debug] [Thread-2 (]: On test.clinical_trial_risk.at_risk_has_both_values: BEGIN
+[0m17:49:37.120307 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:49:37.119372 [debug] [Thread-1 (]: Using duckdb connection "test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c"
+[0m17:49:37.120523 [debug] [Thread-1 (]: On test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c: BEGIN
+[0m17:49:37.120625 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:49:37.120397 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:37.120857 [debug] [Thread-4 (]: Using duckdb connection "test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec"
+[0m17:49:37.120959 [debug] [Thread-4 (]: On test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nct_id
+from "aact"."main"."mart_trial_analysis"
+where nct_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:49:37.120096 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:49:37.121087 [debug] [Thread-3 (]: Using duckdb connection "test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386"
+[0m17:49:37.121310 [debug] [Thread-3 (]: On test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        overall_status as value_field,
+        count(*) as n_records
+
+    from "aact"."main"."mart_trial_analysis"
+    group by overall_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'COMPLETED','TERMINATED','WITHDRAWN'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:49:37.120720 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m17:49:37.121486 [debug] [Thread-2 (]: Using duckdb connection "test.clinical_trial_risk.at_risk_has_both_values"
+[0m17:49:37.121695 [debug] [Thread-2 (]: On test.clinical_trial_risk.at_risk_has_both_values: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "test.clinical_trial_risk.at_risk_has_both_values"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- A singular test FAILS if it returns any rows.
+-- Returns a row when at_risk has fewer than 2 distinct values.
+select count(distinct at_risk) as n_values
+from "aact"."main"."mart_trial_analysis"
+having count(distinct at_risk) < 2
+  
+  
+      
+    ) dbt_internal_test
+[0m17:49:37.121589 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:49:37.121191 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:49:37.121893 [debug] [Thread-1 (]: Using duckdb connection "test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c"
+[0m17:49:37.123290 [debug] [Thread-1 (]: On test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select at_risk
+from "aact"."main"."mart_trial_analysis"
+where at_risk is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:49:37.123424 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m17:49:37.123183 [debug] [Thread-4 (]: On test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec: ROLLBACK
+[0m17:49:37.123547 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m17:49:37.124091 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:49:37.124197 [debug] [Thread-4 (]: On test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec: Close
+[0m17:49:37.123974 [debug] [Thread-2 (]: On test.clinical_trial_risk.at_risk_has_both_values: ROLLBACK
+[0m17:49:37.124604 [debug] [Thread-3 (]: On test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386: ROLLBACK
+[0m17:49:37.124806 [info ] [Thread-4 (]: 16 of 17 PASS not_null_mart_trial_analysis_nct_id .............................. [[32mPASS[0m in 0.02s]
+[0m17:49:37.125422 [debug] [Thread-4 (]: Finished running node test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec
+[0m17:49:37.125539 [debug] [Thread-4 (]: Began running node test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8
+[0m17:49:37.125766 [info ] [Thread-4 (]: 17 of 17 START test unique_mart_trial_analysis_nct_id .......................... [RUN]
+[0m17:49:37.125997 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.clinical_trial_risk.not_null_mart_trial_analysis_nct_id.944d497dec, now test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8)
+[0m17:49:37.126094 [debug] [Thread-4 (]: Began compiling node test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8
+[0m17:49:37.128818 [debug] [Thread-4 (]: Writing injected SQL for node "test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8"
+[0m17:49:37.125225 [debug] [Thread-1 (]: On test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c: ROLLBACK
+[0m17:49:37.125634 [debug] [Thread-2 (]: On test.clinical_trial_risk.at_risk_has_both_values: Close
+[0m17:49:37.125882 [debug] [Thread-3 (]: On test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386: Close
+[0m17:49:37.129258 [info ] [Thread-3 (]: 13 of 17 PASS accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN  [[32mPASS[0m in 0.03s]
+[0m17:49:37.129540 [debug] [Thread-3 (]: Finished running node test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386
+[0m17:49:37.129083 [info ] [Thread-2 (]: 14 of 17 PASS at_risk_has_both_values .......................................... [[32mPASS[0m in 0.02s]
+[0m17:49:37.129819 [debug] [Thread-2 (]: Finished running node test.clinical_trial_risk.at_risk_has_both_values
+[0m17:49:37.129689 [debug] [Thread-4 (]: Began executing node test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8
+[0m17:49:37.130290 [debug] [Thread-4 (]: Writing runtime sql for node "test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8"
+[0m17:49:37.129379 [debug] [Thread-1 (]: On test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c: Close
+[0m17:49:37.130497 [info ] [Thread-1 (]: 15 of 17 PASS not_null_mart_trial_analysis_at_risk ............................. [[32mPASS[0m in 0.02s]
+[0m17:49:37.130665 [debug] [Thread-1 (]: Finished running node test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c
+[0m17:49:37.130792 [debug] [Thread-4 (]: Using duckdb connection "test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8"
+[0m17:49:37.130878 [debug] [Thread-4 (]: On test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8: BEGIN
+[0m17:49:37.130960 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:49:37.131120 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m17:49:37.131215 [debug] [Thread-4 (]: Using duckdb connection "test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8"
+[0m17:49:37.131302 [debug] [Thread-4 (]: On test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8: /* {"app": "dbt", "dbt_version": "1.12.7", "profile_name": "clinical_trial_risk", "target_name": "dev", "node_id": "test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    nct_id as unique_field,
+    count(*) as n_records
+
+from "aact"."main"."mart_trial_analysis"
+where nct_id is not null
+group by nct_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:49:37.135853 [debug] [Thread-4 (]: SQL status: OK in 0.004 seconds
+[0m17:49:37.136422 [debug] [Thread-4 (]: On test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8: ROLLBACK
+[0m17:49:37.136608 [debug] [Thread-4 (]: On test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8: Close
+[0m17:49:37.136798 [info ] [Thread-4 (]: 17 of 17 PASS unique_mart_trial_analysis_nct_id ................................ [[32mPASS[0m in 0.01s]
+[0m17:49:37.136967 [debug] [Thread-4 (]: Finished running node test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8
+[0m17:49:37.137516 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:37.137609 [debug] [MainThread]: On master: BEGIN
+[0m17:49:37.137685 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:49:37.137824 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:49:37.137902 [debug] [MainThread]: On master: COMMIT
+[0m17:49:37.137973 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:37.138040 [debug] [MainThread]: On master: COMMIT
+[0m17:49:37.138183 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:49:37.138288 [debug] [MainThread]: On master: Close
+[0m17:49:37.138409 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:49:37.138489 [debug] [MainThread]: Connection 'test.clinical_trial_risk.not_null_mart_trial_analysis_at_risk.83089e719c' was properly closed.
+[0m17:49:37.138561 [debug] [MainThread]: Connection 'test.clinical_trial_risk.accepted_values_mart_trial_analysis_overall_status__COMPLETED__TERMINATED__WITHDRAWN.2aaa4e4386' was properly closed.
+[0m17:49:37.138629 [debug] [MainThread]: Connection 'test.clinical_trial_risk.unique_mart_trial_analysis_nct_id.aab9a720f8' was properly closed.
+[0m17:49:37.138697 [debug] [MainThread]: Connection 'test.clinical_trial_risk.at_risk_has_both_values' was properly closed.
+[0m17:49:37.138804 [info ] [MainThread]: 
+[0m17:49:37.138912 [info ] [MainThread]: Finished running 4 table models, 5 data tests, 8 view models in 0 hours 0 minutes and 1.10 seconds (1.10s).
+[0m17:49:37.139632 [debug] [MainThread]: Command end result
+[0m17:49:37.151948 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/target/manifest.json
+[0m17:49:37.152857 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/target/semantic_manifest.json
+[0m17:49:37.153554 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/target/osi_document.json
+[0m17:49:37.155977 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/kunaljuvvala/Documents/Fall 2026/DMT/Project Proposal/Project Files/Clinical_trial_recruitment_assessment/dbt/target/run_results.json
+[0m17:49:37.156076 [info ] [MainThread]: 
+[0m17:49:37.156186 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:49:37.156269 [info ] [MainThread]: 
+[0m17:49:37.156360 [info ] [MainThread]: Done. PASS=17 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=17
+[0m17:49:37.156552 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m17:49:37.158121 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 1.8835472, "process_in_blocks": "0", "process_kernel_time": 0.642905, "process_mem_max_rss": "1815576576", "process_out_blocks": "0", "process_user_time": 3.572871}
+[0m17:49:37.158303 [debug] [MainThread]: Command `dbt build` succeeded at 17:49:37.158275 after 1.88 seconds
+[0m17:49:37.158443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111685670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1122b4fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115123e90>]}
+[0m17:49:37.158558 [debug] [MainThread]: Flushing usage events
+[0m17:49:37.346981 [debug] [MainThread]: An error was encountered while trying to flush usage events
