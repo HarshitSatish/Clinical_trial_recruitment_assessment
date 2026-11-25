@@ -1,0 +1,37 @@
+# Features the model is allowed to see.
+# train.py reads this and CI checks it against the banned list 
+
+features:
+  # categorical
+  - phase
+  - allocation
+  - masking
+  - intervention_model
+  - primary_purpose
+  - gender
+  - healthy_volunteers
+  - lead_agency_class
+  - mesh_area
+  - intervention_types
+  - age_population
+
+  # numeric
+  - number_of_arms
+  - number_of_facilities
+  - min_age_years
+  - max_age_years
+  - collaborator_count
+  - condition_count
+  - intervention_count
+  - country_count
+  - criteria_length
+  - sponsor_prior_stop_rate
+
+  # boolean
+  - has_dmc
+  - has_us_facility
+  - has_upper_age_limit
+  - is_multinational
+
+label: at_risk
+split_key: registration_year
